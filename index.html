@@ -11,13 +11,17 @@
 
 <body>
     <div class="wrapper">
+        <!-- Title section with an image logo -->
         <div class="title-wrapper">
             <img src="favicon.png" alt="logo" height="50px">
             <h2 class="title">Personal Mood Tracker</h2>
         </div>
+
+        <!-- Mood selection form -->
         <div class="container" id="mood-form">
             <label class="mood-label">How are you feeling today?</label>
             <form action="">
+                <!-- Dropdown menu for selecting mood -->
                 <select type="dropdown" id="mood" name="mood">
                     <option value="none">--</option>
                     <option value="happy">Happy 😊</option>
@@ -25,27 +29,39 @@
                     <option value="angry">Angry 😡</option>
                     <option value="neutral">Neutral 😐</option>
                 </select>
-                <button id="log-mood" type="submit">Log Mood</button>
-                <button id="delete-logs" type="delete">Delete Logs</button>
 
+                <!-- Button to log selected mood -->
+                <button id="log-mood" type="submit">Log Mood</button>
+                <!-- Button to delete logged moods -->
+                <button id="delete-logs" type="delete">Delete Logs</button>
             </form>
         </div>
+
+        <!-- Mood history timeline -->
         <div class="history-timeline">
             <h3 class="history-title">Mood History</h3>
-            <div class="timeline-container timeline" id="timeline">
-                <!-- Timeline items will be added here -->
 
-                <!-- <div class="timeline-item mood-happy">
+            <!-- Timeline container where logged moods will be displayed dynamically -->
+            <div class="timeline-container timeline" id="timeline">
+                <!-- Timeline items will be added here via JavaScript -->
+
+                <!-- Example of a mood entry (commented out) -->
+
+                <!-- 
+                <div class="timeline-item mood-happy">
                     <div class="timeline-date happy">15 Mar 1</div>
                     <div class="timeline-content happy">
                         <div class="mood-emoji">😐</div>
                         <p>Just a normal day.</p>
                     </div>
-                </div> -->
+                </div> 
+                -->
 
             </div>
         </div>
     </div>
+
+    <!-- Footer section with GitHub link -->
     <div class="foot-wrapper">
         <div id="waterdrop"></div>
         <footer>
@@ -62,13 +78,24 @@
             </div>
         </footer>
     </div>
+
+    <!-- Importing jQuery library for JavaScript functionalities -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script src="https://daniellaharel.com/raindrops/js/raindrops.js"></script>
 
-    <script> jQuery('#waterdrop').raindrops({ color: 'rgb(255, 208, 0)', canvasHeight: 150, density: 0.02, frequency: 30 });
+
+    <!-- Initializing the waterdrop effect with specific settings -->
+    <script>
+        jQuery('#waterdrop').raindrops({
+            color: 'rgb(255, 208, 0)',
+            canvasHeight: 150,
+            density: 0.02,
+            frequency: 30
+        });
     </script>
 
+    <!-- Linking the main JavaScript file for interactivity -->
     <script src="index.js"></script>
 </body>
 
