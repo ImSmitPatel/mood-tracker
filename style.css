@@ -7,16 +7,20 @@
 }
 
 body {
+    width: 100vw;
+    height: 100vh;
     font-family: "Inter Tight", sans-serif;
     font-weight: 400;
     background-color: rgb(27, 27, 27);
-    font-size: 16px;
+    font-size: 20px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-items: center;
 }
 
 .wrapper {
-    width: 100vw;
-    height: 100vh;
+    width: 50%;
     margin: 0 auto;
     padding: 20px;
     display: flex;
@@ -83,6 +87,13 @@ h3 {
     gap: 10px;
 }
 
+.history-timeline {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
 .history-title {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
@@ -93,27 +104,12 @@ h3 {
 
 /* Timeline Container */
 .timeline-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    overflow-x: auto;
-    padding: 20px;
-    white-space: nowrap;
-    scrollbar-width: thin;
-    scrollbar-color: rgb(255, 208, 0) transparent;
-}
-
-/* Horizontal Timeline */
-.timeline {
-    display: flex;
-    align-items: center;
     position: relative;
-    width: 90%;
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 20px 0;
-    overflow-x: auto;
+    display: flex;
+    align-items: center;
+    overflow-y: hidden;
+    padding-block: 10px;
+    scroll-behavior: smooth;
 }
 
 .timeline-container::-webkit-scrollbar {
@@ -126,22 +122,22 @@ h3 {
 }
 
 /* Timeline Line */
-.timeline::before {
+.timeline-container::before {
     content: "";
     position: absolute;
-    top: 50%;
+    top: 15%;
     left: 0;
+    right: 0;
     width: 100%;
     height: 4px;
     background: rgb(255, 208, 0);
-    transform: translateY(-50%);
 }
 
 /* Mood Entry (Each Event) */
 .timeline-item {
     position: relative;
     text-align: center;
-    width: 200px;
+    /* width: 240px; */
     margin: 0 15px;
 }
 
@@ -157,18 +153,56 @@ h3 {
 }
 
 /* Mood Date Color */
-.timeline-date.happy { background: lightgreen; }
-.timeline-date.sad { background: lightblue; }
-.timeline-date.angry { background: lightcoral; }
-.timeline-date.neutral { background: lightgray; }
+.timeline-date.happy {
+    background: #FFDE7D;
+}
+
+.timeline-date.sad {
+    background: #A5A6F6;
+}
+
+.timeline-date.angry {
+    background: #F6A5A5;
+}
+
+.timeline-date.neutral {
+    background: #A5DEF1;
+}
 
 /* Mood Details */
 .timeline-content {
     background: rgb(255, 224, 86);
     padding: 15px;
+    min-width: 125px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     font-size: 16px;
+}
+
+/* Mood Details Color */
+.timeline-content.happy {
+    background: #FFDE7D;
+}
+
+.timeline-content.sad {
+    background: #A5A6F6;
+}
+
+.timeline-content.angry {
+    background: #F6A5A5;
+}
+
+.timeline-content.neutral {
+    background: #A5DEF1;
+}
+
+.timeline-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-item:hover .timeline-date {
+    transform: scale(1.15);
 }
 
 /* Mood Emoji */

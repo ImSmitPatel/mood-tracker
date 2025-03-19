@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mood Tracker</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Personalized Mood Tracker</title>
+    <link rel="stylesheet" href="style1.css">
 </head>
 
 <body>
@@ -13,102 +13,37 @@
         <h2 class="title">Personal Mood Tracker</h2>
         <div class="container" id="mood-form">
             <label class="mood-label">How are you feeling today?</label>
-            <form action="/submit">
+            <form action="">
                 <select type="dropdown" id="mood" name="mood">
                     <option value="none">--</option>
-                    <option value="happy">happy</option>
-                    <option value="sad">sad</option>
-                    <option value="angry">angry</option>
-                    <option value="neutral">neutral</option>
+                    <option value="happy">Happy 😊</option>
+                    <option value="sad">Sad 😢</option>
+                    <option value="angry">Angry 😡</option>
+                    <option value="neutral">Neutral 😐</option>
                 </select>
-                <button id="log-mood" type="button">Log Mood</button>
-                <button id="delete-logs" type="button">Delete Logs</button>
+                <button id="log-mood" type="submit">Log Mood</button>
+                <button id="delete-logs" type="delete">Delete Logs</button>
 
             </form>
         </div>
         <div class="history-timeline">
             <h3 class="history-title">Mood History</h3>
-            <div class="timeline-container">
-                <div class="timeline">
-                    <!-- Mood entries will be inserted here -->
-                    <!-- Mood Log 1 -->
-                    <div class="timeline-item">
-                        <div class="timeline-date happy">12 Mar</div>
-                        <div class="timeline-content">
-                            <div class="mood-emoji">😊</div>
-                            <p>Feeling Happy and Excited!</p>
-                        </div>
-                    </div>
+            <div class="timeline-container timeline" id="timeline">
+                <!-- Timeline items will be added here -->
 
-                    <!-- Mood Log 2 -->
-                    <div class="timeline-item">
-                        <div class="timeline-date sad">13 Mar</div>
-                        <div class="timeline-content">
-                            <div class="mood-emoji">😢</div>
-                            <p>A bit down today.</p>
-                        </div>
+                <div class="timeline-item mood-happy">
+                    <div class="timeline-date happy">15 Mar 1</div>
+                    <div class="timeline-content happy">
+                        <div class="mood-emoji">😐</div>
+                        <p>Just a normal day.</p>
                     </div>
-
-                    <!-- Mood Log 3 -->
-                    <div class="timeline-item">
-                        <div class="timeline-date angry">14 Mar</div>
-                        <div class="timeline-content">
-                            <div class="mood-emoji">😡</div>
-                            <p>Frustrated with work.</p>
-                        </div>
-                    </div>
-
-                    <!-- Mood Log 4 -->
-                    <div class="timeline-item">
-                        <div class="timeline-date neutral">15 Mar</div>
-                        <div class="timeline-content">
-                            <div class="mood-emoji">😐</div>
-                            <p>Just a normal day.</p>
-                        </div>
-                    </div>
-
-                    <!-- Mood Log 1 -->
-                    <div class="timeline-item">
-                        <div class="timeline-date happy">12 Mar</div>
-                        <div class="timeline-content">
-                            <div class="mood-emoji">😊</div>
-                            <p>Feeling Happy and Excited!</p>
-                        </div>
-                    </div>
-
-                    <!-- Mood Log 2 -->
-                    <div class="timeline-item">
-                        <div class="timeline-date sad">13 Mar</div>
-                        <div class="timeline-content">
-                            <div class="mood-emoji">😢</div>
-                            <p>A bit down today.</p>
-                        </div>
-                    </div>
-
-                    <!-- Mood Log 3 -->
-                    <div class="timeline-item">
-                        <div class="timeline-date angry">14 Mar</div>
-                        <div class="timeline-content">
-                            <div class="mood-emoji">😡</div>
-                            <p>Frustrated with work.</p>
-                        </div>
-                    </div>
-
-                    <!-- Mood Log 4 -->
-                    <div class="timeline-item">
-                        <div class="timeline-date neutral">15 Mar</div>
-                        <div class="timeline-content">
-                            <div class="mood-emoji">😐</div>
-                            <p>Just a normal day.</p>
-                        </div>
-                    </div>
-
                 </div>
+
             </div>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
