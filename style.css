@@ -26,12 +26,19 @@ body {
     align-items: center;
 }
 
+.title-wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
 .title {
     color: rgb(255, 208, 0);
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 50px;
-    margin-bottom: 20px;
 }
 
 button {
