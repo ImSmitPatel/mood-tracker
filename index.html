@@ -31,17 +31,39 @@
             <div class="timeline-container timeline" id="timeline">
                 <!-- Timeline items will be added here -->
 
-                <div class="timeline-item mood-happy">
+                <!-- <div class="timeline-item mood-happy">
                     <div class="timeline-date happy">15 Mar 1</div>
                     <div class="timeline-content happy">
                         <div class="mood-emoji">😐</div>
                         <p>Just a normal day.</p>
                     </div>
-                </div>
+                </div> -->
 
             </div>
         </div>
     </div>
+    <div class="foot-wrapper">
+        <div id="waterdrop"></div>
+        <footer>
+            <div class="footer-top">
+                <div class="pt-exebar">
+                    <div class="footer-title">
+                        <h3>Made by Smit Patel</h3>
+                        <a href="https://github.com/ImSmitPatel/mood-tracker" target="_blank">
+                            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github-icon"
+                                height="40px">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="https://daniellaharel.com/raindrops/js/raindrops.js"></script>
+
+    <script> jQuery('#waterdrop').raindrops({ color: 'rgb(255, 208, 0)', canvasHeight: 150, density: 0.02, frequency: 30 });
+    </script>
 
     <script src="index.js"></script>
 </body>
